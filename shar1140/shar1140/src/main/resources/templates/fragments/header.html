@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My ToDo App</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+</head>
+<body>
+    <h1>Welcome to My ToDo App</h1>
+
+    <p>Get started:</p>
+    <ul>
+        <li><a th:href="@{/secure/insertTask}">Add a Task</a></li>
+        <li><a th:href="@{/secure/tasksList}">View Task List</a></li>
+    </ul>

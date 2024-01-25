@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+    <script src="../static/js/login-validation.js" th:src="@{/js/login-validation.js}"></script>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+
+</head>
+
+<body>
+    
+    <div class="login-form">
+        <form action="/login" method="post" name="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br>
+            <input type="submit" value="Sign In">
+        </form>
+        <div id="error" class="error"></div>
+    	<p><a href="/register">Register</a></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" type="text/css" href="/css/addTask.css">
+    <script src="../static/js/script.js" th:src="@{/js/form-validation.js}"></script>
+</head>
+<body>
+    <h1>To-Do List</h1>
+
+    <!-- Form to add or edit a task -->
+    <form th:action="@{/secure/tasksList}" th:object="${task}" method="post" id="taskForm">
+        <input type="hidden" th:field="*{id}" />
+        <label>Title: <input type="text" th:field="*{title}" /></label><br />
+        <label>Description: <input type="text" th:field="*{description}" /></label><br />
+        <label>Due Date: <input type="date" th:field="*{dueDate}" /></label><br />
+        <label>Completed: <input type="checkbox" th:field="*{completed}" /></label><br />
+        <button type="submit">Save Task</button>
+    </form>
+	<form method="post" th:action="@{/logout}">
+	<input type="submit" value="Logout" />
+	</form>
+<footer th:replace="~{fragments/footer.html :: footer}"></footer>
+</body>
+</html>
